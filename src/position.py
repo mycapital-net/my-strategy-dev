@@ -15,7 +15,7 @@ SHORT_CLOSE = 3
 ERROR_CODE = -1
 
 class PosMgrBase(object):
-    """A base class providing position management
+    """A base class providing position management and pnl calculation
 
     Attributes
     ----------
@@ -555,6 +555,8 @@ class PosMgrBase(object):
 
         if last_px - 0 < 0.01:
             return 0
+
+        long_side_unrealized_pnl, short_side_unrealized_pnl = 0.0, 0.0
 
         if long_pos >= 0:
             long_side_unrealized_pnl = long_pos * (last_px - self.avg_px(position[LONG_OPEN]))
