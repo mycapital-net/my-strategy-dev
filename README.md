@@ -13,8 +13,9 @@ my-sdp 策略开发辅助库（www.mycapital.net)
 |-- bar.py
 |-- order.py
 |-- position.py
+|-- sync_order.py
 
 - bar.py 将tick行情加工为bar行情
 - order.py 可作为策略订单管理模块
 - position.py 可作为策略仓位管理模块
- 
+- sync_order.py 作为策略同步发单模块 
